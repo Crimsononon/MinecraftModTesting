@@ -2,5 +2,7 @@
   "item.guidedmod.lead": "Lead",
   "item.guidedmod.raw_lead": "Raw Lead",
   "creativetab.new_items_tab": "New Items",
-  "block.guidedmod.lead_block": "Block of Lead"
+  "block.guidedmod.lead_block": "Block of Lead",
+  "block.guidedmod.raw_lead_block": "Block of Raw Lead",
+  "block.guidedmod.lead.ore": "Lead Ore"
 }

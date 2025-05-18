@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern":  [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "guidedmod:raw_lead"
+    }
+  },
+  "result": {
+    "item": "guidedmod:raw_lead_block"
+  }
+}

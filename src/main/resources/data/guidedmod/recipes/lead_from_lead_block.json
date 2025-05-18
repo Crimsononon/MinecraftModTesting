@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "guidedmod:lead_block"
+    }
+  ],
+  "result": {
+    "item": "guidedmod:lead",
+    "count": 9
+  }
+}
