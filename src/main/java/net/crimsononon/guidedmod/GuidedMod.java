@@ -1,6 +1,10 @@
 package net.crimsononon.guidedmod;
 
 import com.mojang.logging.LogUtils;
+import net.crimsononon.guidedmod.block.ModBlocks;
+import net.crimsononon.guidedmod.item.ModCreativeModTabs;
+import net.crimsononon.guidedmod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -26,6 +30,11 @@ public class GuidedMod
     {
         IEventBus modEventBus = context.getModEventBus();
 
+        ModCreativeModTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -40,7 +49,10 @@ public class GuidedMod
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.LEAD);
+            event.accept(ModItems.RAW_LEAD);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
